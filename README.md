@@ -63,4 +63,5 @@ kubectl delete -f resources-manifests/ingress.yaml
 - Code Optimizations
 - Styled components for easier code reading
 - Additional functionality
+- Add tests
 ```
