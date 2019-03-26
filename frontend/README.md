@@ -9,9 +9,9 @@ The easiest way to run this application is to issue `npm start` from a terminal 
 Another alternative is to use Docker to run the app in a container. To do so, you can issue the following commands:
 
 ```bash
-docker build -t react-tutorial .
+docker build -t mpse .
 
-docker run --name react-tutorial -d -p 3000:80 react-tutorial
+docker run --name mpse -d -p 3000:80 mpse
 ```
 
 This will make your app accessible on the following URL: [`http://localhost:3000`].
@@ -21,15 +21,15 @@ This will make your app accessible on the following URL: [`http://localhost:3000
 Make sure you are currently logged into Docker and then issue the following commands:
 
 ```bash
-docker build -t brunokrebs/react-tutorial .
+docker build -t <DOCKER_USERNAME>/mpse .
 
-docker push brunokrebs/react-tutorial
+docker push <DOCKER_USERNAME>/mpse
 ```
 
-In the code snippet above, you will need to replace `brunokrebs` with your own Docker username (unless you are me 😊).
+In the code snippet above, you will need to replace `<DOCKER_USERNAME>` with your own Docker username.
 
 If you do push a Docker image to [Docker Hub](https://hub.docker.com/), then you can use it like this:
 
 ```bash
-docker run --name react-tutorial -d -p 3000:3000 brunokrebs/react-tutorial
+docker run --name mpse -d -p 3000:3000 <DOCKER_USERNAME>/mpse
 ```

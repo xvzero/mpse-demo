@@ -1,13 +1,14 @@
 import auth0 from 'auth0-js';
+import { app_uri } from './lib/constants';
 
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
       // the following three lines MUST be updated
-      domain: 'bk-tmp.auth0.com',
-      audience: 'https://bk-tmp.auth0.com/userinfo',
-      clientID: 'PVafIu9Q5QN65DiPByAFvCCJryY7n432',
-      redirectUri: 'http://localhost:3000/callback',
+      domain: process.env.REACT_APP_AUTH0_DOMAIN,
+      audience: `https://${process.env.REACT_APP_AUTH0_DOMAIN}/userinfo`,
+      clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
+      redirectUri: `${app_uri}/callback`,
       responseType: 'id_token',
       scope: 'openid profile'
     });
@@ -56,9 +57,12 @@ class Auth {
   }
 
   signOut() {
+    this.idToken = null;
+    this.profile = null;
+    this.expiresAt = null;
     this.auth0.logout({
-      returnTo: 'http://localhost:3000',
-      clientID: 'PVafIu9Q5QN65DiPByAFvCCJryY7n432',
+      returnTo: app_uri,
+      clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
     });
   }
 

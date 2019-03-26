@@ -9,9 +9,9 @@ The easiest way to run this application is to issue `node src` from a terminal p
 Another alternative is to use Docker to run the app in a container. To do so, you can issue the following commands:
 
 ```bash
-docker build -t react-tutorial-backend .
+docker build -t mpse-backend .
 
-docker run --name react-tutorial-backend -d -p 8081:8081 react-tutorial-backend
+docker run --name mpse-backend -d -p 8081:8081 mpse-backend
 ```
 
 This will make your API accessible on the following URL: [`http://localhost:8081`].
@@ -21,15 +21,15 @@ This will make your API accessible on the following URL: [`http://localhost:8081
 Make sure you are currently logged into Docker and then issue the following commands:
 
 ```bash
-docker build -t brunokrebs/react-tutorial-backend .
+docker build -t <DOCKER_USERNAME>/mpse-backend .
 
-docker push brunokrebs/react-tutorial-backend
+docker push <DOCKER_USERNAME>/mpse-backend
 ```
 
-In the code snippet above, you will need to replace `brunokrebs` with your own Docker username (unless you are me 😊).
+In the code snippet above, you will need to replace `<DOCKER_USERNAME>` with your own Docker username.
 
 If you do push a Docker image to [Docker Hub](https://hub.docker.com/), then you can use it like this:
 
 ```bash
-docker run --name react-tutorial-backend -d -p 8081:8081 brunokrebs/react-tutorial-backend
+docker run --name mpse-backend -d -p 8081:8081 <DOCKER_USERNAME>/mpse-backend
 ```
