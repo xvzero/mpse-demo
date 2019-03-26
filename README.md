@@ -1,4 +1,4 @@
-A full stack application using the react tutorial linked below as boilerplate:
+## A full stack application using the react tutorial linked below as boilerplate:
 
 [React Tutorial: Building and Securing Your First App](https://auth0.com/blog/react-tutorial-building-and-securing-your-first-app/)
 
