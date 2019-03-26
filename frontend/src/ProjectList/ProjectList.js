@@ -84,4 +84,4 @@ class ProjectList extends Component {
   }
 }
 
-export default Projects;
+export default ProjectList;
