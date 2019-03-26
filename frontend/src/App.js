@@ -3,7 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 import auth0Client from './Auth';
 import NavBar from './NavBar/NavBar';
 import Project from './Project/Project';
-import Projects from './Projects/Projects';
+import ProjectList from './ProjectList/ProjectList';
 import NewProject from './NewProject/NewProject';
 import SecuredRoute from './SecuredRoute/SecuredRoute';
 import Callback from './Callback';
@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div>
         <NavBar/>
-        <Route exact path='/' component={Projects}/>
+        <Route exact path='/' component={ProjectList}/>
         <Route exact path='/project/:projectId' component={Project}/>
         <Route exact path='/callback' component={Callback}/>
         <SecuredRoute path='/new-project'

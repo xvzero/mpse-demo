@@ -5,7 +5,7 @@ import { server } from '../lib/constants';
 import socketIOClient from '../SocketIO';
 import TimeContainer from '../TimeContainer/TimeContainer';
 
-class Projects extends Component {
+class ProjectList extends Component {
   constructor(props) {
     super(props);
 
