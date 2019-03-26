@@ -6,7 +6,7 @@
 
 ```bash
 # after cloning, move into this dir
-cd react-tutorial
+cd mpse-demo
 
 # install backend deps
 cd backend
