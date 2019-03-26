@@ -53,3 +53,14 @@ kubectl delete -f resources-manifests/backend-service.yaml
 kubectl delete -f resources-manifests/frontend-service.yaml
 kubectl delete -f resources-manifests/ingress.yaml
 ```
+
+### TODO:
+
+```bash
+- Integration with a database (postgreSQL | AWS RDS)
+- AWS S3 for image uploading
+- UI Improvements
+- Code Optimizations
+- Styled components for easier code reading
+- Additional functionality
+```
